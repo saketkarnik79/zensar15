@@ -1,0 +1,164 @@
+<h1>{{title()}}</h1>
+<hr/>
+<!-- <ul>
+  <li *ngFor="let movie of movies; trackBy: trackByTitle">
+    {{movie.title}} ({{movie.releaseDate}}) - Directed by {{movie.director}}
+  </li>
+</ul>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Director</th>
+      <th>Cast</th>
+      <th>Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(movie of movies; track movie.title) {
+      <tr>
+        <td>{{movie.title}}</td>
+        <td>{{movie.director}}</td>
+        <td>{{movie.cast}}</td>
+        <td>{{movie.releaseDate}}</td>
+      </tr>
+    }
+  </tbody>
+</table> -->
+<!-- <h2>ngSwitch Demo</h2>
+<div class="toolbar">
+  <button (click)="setMode('list')">List</button>
+  <button (click)="setMode('grid')">Grid</button>
+  <button (click)="setMode('table')">Table</button>
+  <button (click)="setMode('unknown')">Unknown</button>
+</div> -->
+<!-- <ng-container [ngSwitch]="mode()">
+  <div *ngSwitchCase="'list'">
+    <h3>List View</h3>
+    <ul>
+      <li *ngFor="let movie of movies">
+        {{movie.title}} ({{movie.releaseDate}}) - Directed by {{movie.director}}
+      </li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'grid'">
+    <h3>Grid View</h3>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+      <div *ngFor="let movie of movies" style="border: 1px solid black; padding: 10px;">
+        <strong>{{movie.title}}</strong><br/>
+        Directed by {{movie.director}}<br/>
+        Release Date: {{movie.releaseDate}}
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'table'">
+    <h3>Table View</h3>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Director</th>
+          <th>Cast</th>
+          <th>Release Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies">
+          <td>{{movie.title}}</td>
+          <td>{{movie.director}}</td>
+          <td>{{movie.cast}}</td>
+          <td>{{movie.releaseDate}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngSwitchDefault>
+    <h3>Unknown View Mode</h3>
+    <p>Please select a valid view mode.</p>
+  </div> -->
+  <!-- @switch (mode()) {
+    @case ('list') {
+      <div>
+        <h3>List View</h3>
+        <ul>
+          @for (movie of movies; track movie.title) {
+            <li>
+              {{movie.title}} ({{movie.releaseDate}}) - Directed by {{movie.director}}
+            </li>
+          }
+        </ul>
+      </div>
+    }
+    @case ('grid') {
+      <div>
+        <h3>Grid View</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+          @for (movie of movies; track movie.title) {
+            <div style="border: 1px solid black; padding: 10px;">
+              <strong>{{movie.title}}</strong><br/>
+              Directed by {{movie.director}}<br/>
+              Release Date: {{movie.releaseDate}}
+            </div>
+          }
+        </div>
+      </div>
+    }
+    @case ('table') {
+      <div>
+        <h3>Table View</h3>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Director</th>
+              <th>Cast</th>
+              <th>Release Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (movie of movies; track movie.title) {
+              <tr>
+                <td>{{movie.title}}</td>
+                <td>{{movie.director}}</td>
+                <td>{{movie.cast}}</td>
+                <td>{{movie.releaseDate}}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+    @default {
+      <div>
+        <h3>Unknown View Mode</h3>
+        <p>Please select a valid view mode.</p>
+      </div>
+    }
+  } -->
+
+  <!-- <h2>ngIf Demo</h2>
+  <button (click)="toggle()">
+    {{ showDetails() ? 'Hide' : 'Show' }} Details
+  </button> -->
+  <!-- <div *ngIf="showDetails(); else noDetails">
+    <p>Showing details block</p>
+  </div>
+  <ng-template #noDetails>
+    <p>Details are hidden</p>
+  </ng-template> -->
+  <!-- @if(showDetails()) {
+    <div>
+      <p>Showing details block</p>
+    </div>
+  } @else {
+    <div>
+      <p>Details are hidden</p>
+    </div>
+  } -->
+
+  <!-- <div ngClass  ="primary big">Sample Text</div> -->
+  <!-- <div [ngClass] ="'primary big'">Sample Text</div> -->
+  <!-- <div [ngClass] = "['primary', 'big']">Sample Text</div> -->
+  <!-- <div [ngClass] = "{'primary': true, 'big': true, 'italics': true}">Sample Text</div> -->
+  <div [ngClass] = "cssClass">Sample Text</div>
+ 

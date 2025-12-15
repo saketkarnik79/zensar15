@@ -1,0 +1,23 @@
+<button [attr.aria-label]="closeLabel" (click)="closeMe()">X</button>
+
+<table border="1">
+  <tr>
+    <td>Col 1</td>
+    <td>Col 2</td>
+    <td>Col 3</td>
+  </tr>
+  <tr>
+    <td [attr.colspan]="2">This cell spans 2 columns</td>
+    <td>Col 3</td>
+  </tr>
+  <tr>
+    <td>Col 1</td>
+    <td bind-attr.colspan="getColspan()">This cell spans 2 columns using a method</td>
+  </tr>
+  <tr>
+    <td>Col 1</td>
+    <td>Col 2</td>
+    <td>Col 3</td>
+  </tr>
+</table>
+<router-outlet></router-outlet>

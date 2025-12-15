@@ -1,0 +1,5 @@
+<h2>{{title()}}</h2>
+<!-- <input type="text" [value]="name" (input)="name=$event.target.value" placeholder="Enter name" /> -->
+ <input type="text" [(ngModel)]="name"  placeholder="Enter name"  />
+<p>Your name is: {{name}}</p>
+<button (click)="clearName()">Clear Name</button>

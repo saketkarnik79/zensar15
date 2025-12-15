@@ -1,0 +1,27 @@
+.toolbar{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.primary{
+    color: red;
+}
+.secondary{
+    color: green;
+}
+.big{
+    font-size: 20px;
+}
+.small{
+    font-size: 12px;
+}
+.italics{
+    font-style: italic;
+}
+.is-active{
+    font-weight: bolder;
+}
+.section{
+    margin: 10px;
+}

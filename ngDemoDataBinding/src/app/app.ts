@@ -13,6 +13,7 @@ export class App {
   firstName:string = 'James';
   lastName:string = 'Bond';
   showButton: boolean = true;
+  
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
   }

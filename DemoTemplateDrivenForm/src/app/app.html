@@ -1,0 +1,62 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <div>
+    <label for ="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstName" placeholder="First Name" [(ngModel)] = "contact.firstName"/>
+  </div>
+  <div>
+    <label for ="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Last Name" [(ngModel)] = "contact.lastName" />
+  </div>
+  <div>
+    <label for ="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email" [(ngModel)] = "contact.email" />
+  </div>
+  <div>
+    <label for ="gender">Gender</label>
+    <input type="radio" value="Male" id="genderm" name="gender" placeholder="Gender" [(ngModel)] = "contact.gender" /> Male
+    <input type="radio" value="Female" id="genderf" name="gender" placeholder="Gender" [(ngModel)] = "contact.gender" /> Female
+  </div>
+  <div [ngModelGroup]="'address'">
+    <div>
+      <label for ="street">Street</label>
+      <input type="text" id="street" name="street" placeholder="Street" [(ngModel)] = "contact.address.street" />
+    </div>
+    <div>
+      <label for ="city">City</label>
+      <input type="text" id="city" name="city" placeholder="city" [(ngModel)] = "contact.address.city" />
+    </div>
+    <div>
+      <label for ="country">Country</label>
+      <select id="country" name="country" [(ngModel)] = "contact.address.country">
+        <option selected="---Select Country---" value=""></option>
+        <option [ngValue] = "c.id" *ngFor="let c of countryList">
+          {{ c.name }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <label for ="pincode">Pin Code</label>
+      <input type="text" id="pincode" name="pincode" placeholder="Pin Code" [(ngModel)] = "contact.address.pincode" />
+    </div>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+  <div>
+    <button type="button" (click)="reset()">Reset</button>
+  </div>
+  <div>
+    <strong>Valid Form?: </strong> {{ contactForm.valid }}
+  </div>
+  <div>
+    <strong>Touched Form?: </strong> {{ contactForm.touched }}
+  </div>
+  <div>
+    <strong>Pristine Form: </strong> {{ contactForm.pristine }}
+  </div>
+  <div>
+    <strong>Dirty Form?: </strong> {{ contactForm.dirty }}
+  </div>
+</form>
+<button type="button" (click)="changeEmail()">Change Email</button>
+<router-outlet></router-outlet>

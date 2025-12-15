@@ -1,0 +1,52 @@
+<p>
+  Original Representation: {{text1}}
+</p>
+<p>
+  Lowercase Representation: {{text1 | lowercase}}
+</p>
+<p>
+  Uppercase Representation: {{text1 | uppercase}}
+</p>
+<p>
+  Titlecase Representation: {{text1 | titlecase}}
+</p>
+<p>
+  Slice Demo: {{text1 | slice:0:6 | lowercase}}
+</p>
+<p>
+  Currency Demo: {{price | currency:'INR':'code':'1.2-2'}}
+</p>
+<p>
+  Decimal(Number) Demo: {{price | number:'1.2-2'}}
+</p>
+<p>
+  Percent Demo: {{n1 | percent:'1.2-2'}}
+</p>
+<p>
+  Date Demo: {{today | date: 'MMMM yyyy'}}
+</p>
+<p>
+  Json Demo: {{person | json}}
+</p>
+<ul>
+  <li *ngFor="let tech of mapKV | keyvalue">
+    {{tech.key}}: {{tech.value}}
+  </li>
+</ul>
+<p>
+  Async Demo: {{tick$ | async}}
+</p>
+<div>
+  <h4>Farenheit to Celcius</h4>
+  <p>
+    Farenheit: <input type="number" [(ngModel)]="farenheit" placeholder="Temperature in Farenheit"/>
+    Celsius: {{farenheit | tempConverter:'C'}}
+  </p>
+</div>
+<div>
+  <h4>Celcius to Farenheit</h4>
+  <p>
+    Celsius: <input type="number" [(ngModel)]="celcius" placeholder="Temperature in Celsius"/>
+    Farenheit: {{celcius | tempConverter:'F'}}
+  </p>
+</div>
