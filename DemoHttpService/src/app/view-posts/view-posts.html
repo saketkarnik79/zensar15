@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Post Management</a>
+    <button class="navbar-toggler" type ="button" data-toggle="collapse" data-target="#navbarNaSupportContent"
+        aria-controls="navbarSupportContent" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <!-- <a class="nav-link" href="/view"> -->
+                <a class="nav-link" [routerLink]="['view']">
+                    View <span class="sr-only"><strong>(current)</strong></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/add/">Add Post</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1">
+
+        </div>
+        <table class="table table-bordered table-striped col-sm-10">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Body</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- <tr *ngFor="let post of posts"> -->
+                <tr *ngFor="let post of posts()">
+                    <td>{{post.title}}</td>
+                    <td>{{post.body}}</td>
+                    <td>
+                        <button class="btn btn-warning" (click)="updatePost(post.id)" >Update</button>
+                        <button class="btn btn-danger" (click)="deletePost(post.id)" >Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Post Management</a>
+    <button class="navbar-toggler" type ="button" data-toggle="collapse" data-target="#navbarNaSupportContent" 
+        aria-controls="navbarSupportContent" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/view">
+                    View <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/add">Add Post</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form class="col-12">
+                <table class="col-12 table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="id" >Id</label>
+                            </td>
+                            <td>
+                                <input type="number" id="id" name="id" [(ngModel)]="id" 
+                                    class="form-control" placeholder="Id" readonly/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="userId" >User Id</label>
+                            </td>
+                            <td>
+                                <input type="number" id="userId" name="userId" [(ngModel)]="post().userId" 
+                                    class="form-control" placeholder="User Id" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="title" >Title</label>
+                            </td>
+                            <td>
+                                <input type="text" id="title" name="title" [(ngModel)]="post().title" 
+                                    class="form-control" placeholder="Title"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="body" >Body</label>
+                            </td>
+                            <td>
+                                <textarea id="body" name="body" [(ngModel)]="post().body" rows="8"
+                                    class="form-control" placeholder="Body"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn btn-primary" (click)="updatePost()">
+                                    Update Post
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

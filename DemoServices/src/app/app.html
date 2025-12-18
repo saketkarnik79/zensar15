@@ -1,0 +1,24 @@
+<h1>{{ title() }}</h1>
+
+<div class="container">
+  <button type="button" (click) ="getProducts()">Get Products</button>
+
+  <div class="table table-responsive table-striped">
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products;">
+        <td>{{ p.productID }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.price }}</td>
+      </tr>
+    </tbody>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
